@@ -12,6 +12,7 @@ The following command will run docker image `lagroht/capd` (Debian with latest g
 To access your source code, place it in the `workdir` subfolder.
 
 Options are:
+
 *  `-n name`       docker container name          (default=capd)
 *  `-t imageName`  name of docker image to be run (default=lagroht/capd)
 *  `-d path`       path to a folder that will be mounted in container at /usr/src/workdir
