@@ -2,6 +2,8 @@
 
 Scripts to create and run docker image with current release of capd.
 
+CAPD docker images are hosted on [https://hub.docker.com/r/lagroht/capd](https://hub.docker.com/r/lagroht/capd).
+
 # Using capd docker image
 
 The following command will run docker image `lagroht/capd` (Debian with latest gcc and capd installed).  
@@ -23,8 +25,8 @@ Options are:
 |---- |---  |
 |lagroht/capd:latest | lastest version |
 |lagroht/capd:v12 | gcc 12.2 |
-|lagroht/capd:v10 | gcc 10.2 |
-|lagroht/capd:v8 | gcc 8.4 |
+|lagroht/capd:v10 | gcc 10.4 |
+|lagroht/capd:v8 | gcc 8.5 |
 
 
 To run image given with `version` invoke
@@ -62,4 +64,10 @@ To choose other version of gcc or capd you can also edit `Dockerfile` file direc
 
 # Uploading image do docker library
 
+CAPD docker images are hosted on [https://hub.docker.com/r/lagroht/capd](https://hub.docker.com/r/lagroht/capd).
+
+```bash
+docker login
+docker push lagroht/capd
+```
 
