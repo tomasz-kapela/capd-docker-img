@@ -8,6 +8,7 @@ RUN apt-get update
 RUN apt-get install -y libmpfr-dev autoconf libtool zip subversion
 RUN apt-get install -y libboost-test-dev libboost-filesystem-dev libboost-tools-dev
 RUN apt-get install -y  ssh screen vim
+RUN apt-get install -y  gdb valgrind
 
 # Downloading capd
 WORKDIR /usr/src/sources
