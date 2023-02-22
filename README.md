@@ -11,7 +11,7 @@ The following command will run docker image `lagroht/capd` (Debian with latest g
 ```bash
 ./run.sh
 ```
-To access your source code, place it in the `workdir` subfolder.
+To access your source code, place it in the `workdir` subfolder (see [workdir/README.md](workdir/README.md) file for details). 
 
 Options are:
 
