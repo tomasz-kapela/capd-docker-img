@@ -40,6 +40,23 @@ You can also call directly docker
 sudo docker run -it --rm -v path/to/workdir:/usr/src/workdir --name containerName lagroht/capd:version
 ```
 
+# Updating capd image 
+
+The `run.sh` script will run given docker image (`lagroht/capd` by default). It will download image on the first use, 
+but if it is present in local storage then it will use local one. 
+Especially, it will not check for updates. To update/download `lagroht/capd` image you need to invoke 
+
+```
+docker pull lagroht/capd
+```  
+
+Other usefull commands
+
+```
+   docker images    # list local images
+   docker image rm IMAGE_ID
+```
+
 # Creating capd docker image
 
 To create local version of capd docker image run command
