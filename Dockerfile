@@ -37,9 +37,11 @@ RUN make install
 RUN ldconfig
 
 # Cleaning capd
-#WORKDIR /usr/src/sources
-#RUN rm -rf capdbuild
-#RUN rm -rf capd
+WORKDIR /usr/src/sources
+RUN rm -rf capdbuild
+RUN rm -rf capd
+
+COPY .bashrc /root/.bashrc
 
 WORKDIR /usr/src/
 CMD ["bash"]
