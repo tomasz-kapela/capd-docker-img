@@ -1,12 +1,13 @@
-FROM gcc:latest
+ARG GCCVERSION=latest
+FROM gcc:${GCCVERSION}
+# FROM gcc:8.4
 
 # Installing capd dependencies
 RUN apt-get update
 # RUN apt-get install -y liblog4cxx-dev 
 RUN apt-get install -y libmpfr-dev autoconf libtool zip subversion
 RUN apt-get install -y libboost-test-dev libboost-filesystem-dev libboost-tools-dev
-RUN apt-get install -y  ssh screen vim 
-RUN apt-get install -y  gdb valgrind
+RUN apt-get install -y  ssh screen vim
 
 # Downloading capd
 WORKDIR /usr/src/sources
@@ -31,8 +32,8 @@ RUN make -j 4 lib
 #RUN make check
 
 # Installing CAPD  
-#RUN make install
-#RUN ldconfig
+RUN make install
+RUN ldconfig
 
 # Cleaning capd
 #WORKDIR /usr/src/sources
